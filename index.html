@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Khandagale | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Atharva Khandagale - Computer Engineering Undergraduate, Web Developer, and Cybersecurity Enthusiast.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Ambient Background Glows -->
+    <div class="bg-glow red-glow"></div>
+    <div class="bg-glow blue-glow"></div>
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-badge">AK</span>
+                <span class="logo-text">ATHARVA<span class="text-accent-blue">.DEV</span></span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Me</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-nav">
+                    <span>Let's Talk</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HEADER / HERO SECTION -->
+    <header class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot red"></span>
+                    <span class="badge-dot blue"></span>
+                    <span>Computer Engineering Student</span>
+                </div>
+                <h1 class="hero-title">
+                    HI, I'M <span class="gradient-text-red-blue">ATHARVA KHANDAGALE</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I am a <span class="typed-text" id="typed-text"></span><span class="cursor">&nbsp;</span>
+                </h2>
+                <p class="hero-description">
+                    Computer Engineering undergraduate at SIES GST passionate about crafting robust full-stack
+                    applications, intelligent AI tools, and securing web architectures with ethical hacking
+                    practices.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn-primary btn-glow-blue">
+                        <span>View My Work</span>
+                        <i class="fa-solid fa-rocket"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-glow-red">
+                        <span>Let's Connect</span>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </a>
+                </div>
+
+                <!-- Stats Ticker Bar -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number gradient-text-blue">9.46</span>
+                        <span class="stat-label">B.Tech CGPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number gradient-text-red">10+</span>
+                        <span class="stat-label">Hackathons & CTFs</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number gradient-text-blue">3/span>
+                            <span class="stat-label">Part of Communities</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-card-container">
+                    <div class="profile-card">
+                        <div class="profile-img-wrapper">
+                            <img src="ak.jpeg" alt="Atharva Khandagale Profile Photo" class="profile-img">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="profile-tag top-left">
+                            <i class="fa-solid fa-shield-halved text-accent-red"></i>
+                            <span>Cybersecurity</span>
+                        </div>
+                        <div class="profile-tag bottom-right">
+                            <i class="fa-solid fa-code text-accent-blue"></i>
+                            <span>FastAPI & React</span>
+                        </div>
+                    </div>
+                    <!-- Ambient Dual Rings -->
+                    <div class="neon-ring ring-red"></div>
+                    <div class="neon-ring ring-blue"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST STRIP / TECH STACK HIGHLIGHT -->
+    <div class="tech-strip">
+        <div class="tech-strip-container">
+            <span class="tech-strip-title">CORE TECHNOLOGIES & TOOLS</span>
+            <div class="tech-icons">
+                <div class="tech-chip"><i class="fa-brands fa-python text-accent-blue"></i> Python</div>
+                <div class="tech-chip"><i class="fa-solid fa-bolt text-accent-red"></i> FastAPI</div>
+                <div class="tech-chip"><i class="fa-brands fa-react text-accent-blue"></i> React</div>
+                <div class="tech-chip"><i class="fa-solid fa-database text-accent-red"></i> MongoDB</div>
+                <div class="tech-chip"><i class="fa-brands fa-js text-accent-blue"></i> JavaScript</div>
+                <div class="tech-chip"><i class="fa-solid fa-bug text-accent-red"></i> Burp Suite</div>
+                <div class="tech-chip"><i class="fa-brands fa-linux text-accent-blue"></i> Kali Linux</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- 3. ABOUT ME SECTION -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag red-tag">WHO AM I</span>
+                    <h2 class="section-title">About <span class="gradient-text-red">Me</span></h2>
+                    <p class="section-subtitle">A blend of software engineering and cybersecurity.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card bio-card">
+                        <div class="card-icon red-icon"><i class="fa-solid fa-user-gear"></i></div>
+                        <h3>Passionate Engineering Student</h3>
+                        <p>
+                            I am currently pursuing my B.Tech in Computer Engineering at SIES Graduate School of
+                            Technology, Nerul (2024–2028). I excel at constructing performant web architectures,
+                            building AI-integrated solutions, and discovering security vulnerabilities before malicious
+                            actors do.
+                        </p>
+                        <div class="location-badge">
+                            <i class="fa-solid fa-location-dot text-accent-red"></i>
+                            <span>Navi Mumbai, Maharashtra, India</span>
+                        </div>
+                    </div>
+
+                    <div class="about-card education-card">
+                        <div class="card-icon blue-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Education Background</h3>
+                        <div class="education-timeline">
+                            <div class="edu-item">
+                                <div class="edu-dot blue"></div>
+                                <div class="edu-content">
+                                    <h4>B.Tech (Computer Engineering)</h4>
+                                    <span class="edu-place">SIES Graduate School of Technology, Nerul (2024 –
+                                        2028)</span>
+                                    <span class="edu-score">SGPA: 9.71 | 9.33 | 9.18 | 9.62</span>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-dot red"></div>
+                                <div class="edu-content">
+                                    <h4>Class XII (HSC)</h4>
+                                    <span class="edu-place">S.S. High School & Jr. College, Seawoods (2022 –
+                                        2024)</span>
+                                    <span class="edu-score">Percentage: 82.33%</span>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-dot blue"></div>
+                                <div class="edu-content">
+                                    <h4>Class X (ICSE)</h4>
+                                    <span class="edu-place">Podar International School, Nerul (2009 – 2022)</span>
+                                    <span class="edu-score">Score: 91.4%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Categories Grid -->
+                <div class="skills-wrapper">
+                    <h3 class="skills-title">Technical Expertise</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category-card">
+                            <div class="skill-category-header">
+                                <i class="fa-solid fa-code text-accent-blue"></i>
+                                <h4>Languages & Core</h4>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-header">
+                                <i class="fa-solid fa-layer-group text-accent-red"></i>
+                                <h4>Web & Frontend</h4>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vite</span>
+                                <span class="skill-tag">TailwindCSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-header">
+                                <i class="fa-solid fa-server text-accent-blue"></i>
+                                <h4>Backend & Databases</h4>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-header">
+                                <i class="fa-solid fa-user-shield text-accent-red"></i>
+                                <h4>Cybersecurity & Tools</h4>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Burp Suite</span>
+                                <span class="skill-tag">OWASP Top 10</span>
+                                <span class="skill-tag">Kali Linux</span>
+                                <span class="skill-tag">Git & GitHub</span>
+                                <span class="skill-tag">Wireshark</span>
+                                <span class="skill-tag">Nmap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERIENCE SECTION -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag blue-tag">LEADERSHIP & EXPERIENCE</span>
+                    <h2 class="section-title">My <span class="gradient-text-blue">Journey</span></h2>
+                    <p class="section-subtitle">Roles in community leadership, campus ambassadorship, and cybersecurity
+                        training.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot red-glow-dot"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Google Student Ambassador</h3>
+                                    <h4 class="company-name text-accent-red">Google Gemini</h4>
+                                </div>
+                                <span class="timeline-badge red">May 2026 – Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Representing Google Gemini on college campus, hosting interactive tech workshops and
+                                    developer sessions.</li>
+                                <li>Conducting peer interviews and driving AI tool awareness among computer engineering
+                                    students.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot blue-glow-dot"><i class="fa-solid fa-users-gear"></i></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Volunteer</h3>
+                                    <h4 class="company-name text-accent-blue">Google Developers Group on Campus, SIESGST
+                                    </h4>
+                                </div>
+                                <span class="timeline-badge blue">Jan 2026 – Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Core organizing crew member of <strong>PIXELVERSE</strong> — a flagship national
+                                    design hackathon with 140+ participants across India.</li>
+                                <li>Managed logistics, participant onboarding, and technical mentoring during hackathon
+                                    rounds.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot red-glow-dot"><i class="fa-solid fa-sitemap"></i></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Event Volunteer</h3>
+                                    <h4 class="company-name text-accent-red">IEEE, SIESGST</h4>
+                                </div>
+                                <span class="timeline-badge red">Sep 2025</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Organized the "Squabble" sub-event within <strong>TECHOPEDIA</strong>, the annual
+                                    flagship technical festival of IEEE SIESGST.</li>
+                                <li>Coordinated event execution, speaker management, and live competition logistics.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot blue-glow-dot"><i class="fa-solid fa-user-ninja"></i></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Ethical Hacking Intern</h3>
+                                    <h4 class="company-name text-accent-blue">SIESGST In-house Internship</h4>
+                                </div>
+                                <span class="timeline-badge blue">Jul 2025 (15 Days)</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Identified, analyzed, and exploited OWASP TOP 10 security vulnerabilities on OWASP
+                                    Juice Shop web application.</li>
+                                <li>Utilized Burp Suite Professional tools to intercept HTTP traffic, test SQL
+                                    Injection, XSS, and broken access controls.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FEATURED PROJECTS SECTION -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header space-between">
+                    <div>
+                        <span class="section-tag red-tag">FEATURED WORK</span>
+                        <h2 class="section-title">Selected <span class="gradient-text-red-blue">Projects</span></h2>
+                        <p class="section-subtitle">Real-world AI tools, web security platforms, and matchmaking
+                            systems.</p>
+                    </div>
+
+                    <!-- Project Filters -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="ai-web">AI & Web</button>
+                        <button class="filter-btn" data-filter="security">Security</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 Card -->
+                    <div class="project-card" data-category="security ai-web">
+                        <div class="project-img-holder">
+                            <div class="project-gradient-bg bg-lazarus">
+                                <div class="project-icon-badge"><i class="fa-solid fa-shield-cat"></i></div>
+                                <span class="featured-ribbon">National Grand Finalist</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>FastAPI</span>
+                                <span>React</span>
+                                <span>MongoDB</span>
+                                <span>Qwen LLM</span>
+                            </div>
+                            <h3 class="project-title">Lazarus — API Discovery & Risk Intelligence</h3>
+                            <p class="project-desc">
+                                AI-driven security platform that automatically discovers internal REST API endpoints,
+                                performs vulnerability scanning, and provides intelligent risk mitigations using Qwen
+                                LLM models.
+                            </p>
+                            <div class="project-footer">
+                                <a href="https://github.com/ketkar-atharva/Lazarus" target="_blank" rel="noopener"
+                                    class="btn btn-outline-blue btn-sm">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <div class="project-meta-info">
+                                    <i class="fa-solid fa-trophy text-accent-red"></i> VISHWANOVA(MIT-WPU) &
+                                    INNOVATIONS(CSI, SIESGST) Finalist
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 Card -->
+                    <div class="project-card" data-category="ai-web">
+                        <div class="project-img-holder">
+                            <div class="project-gradient-bg bg-careerlens">
+                                <div class="project-icon-badge"><i class="fa-solid fa-file-contract"></i></div>
+                                <span class="featured-ribbon blue-ribbon">Deployed</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>AI Readiness</span>
+                            </div>
+                            <h3 class="project-title">CareerLens — AI Resume Analyzer</h3>
+                            <p class="project-desc">
+                                AI-powered resume and career readiness analyzer built during GDGoC TechSprint 2025–26.
+                                Provides actionable suggestions, ATS scoring, and targeted skill gap analysis.
+                            </p>
+                            <div class="project-footer">
+                                <a href="https://github.com/ketkar-atharva/careerlens" target="_blank" rel="noopener"
+                                    class="btn btn-outline-red btn-sm">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <div class="project-meta-info">
+                                    <i class="fa-solid fa-code-commit text-accent-blue"></i>TechSprint Hackathon(GDGoC,
+                                    SIESGST)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 Card -->
+                    <div class="project-card" data-category="ai-web">
+                        <div class="project-img-holder">
+                            <div class="project-gradient-bg bg-nexus">
+                                <div class="project-icon-badge"><i class="fa-solid fa-chart-line"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>Matchmaking</span>
+                            </div>
+                            <h3 class="project-title">Nexus — Startup-Investor Matchmaker</h3>
+                            <p class="project-desc">
+                                AI-powered matchmaking platform connecting early-stage tech startups with compatible
+                                angel investors based on domain, stage, and pitch evaluation algorithms. Developed at
+                                VEGA Hackathon 2026.
+                            </p>
+                            <div class="project-footer">
+                                <a href="https://github.com/AtharvaK0209/Nexus" target="_blank" rel="noopener"
+                                    class="btn btn-outline-blue btn-sm">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <div class="project-meta-info">
+                                    <i class="fa-solid fa-lightbulb text-accent-red"></i> VEGA Hackathon(SAKEC)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 Card -->
+                    <div class="project-card" data-category="ai-web">
+                        <div class="project-img-holder">
+                            <div class="project-gradient-bg bg-globetrotter">
+                                <div class="project-icon-badge"><i class="fa-solid fa-plane"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Web App</span>
+                                <span>Hackathon</span>
+                            </div>
+                            <h3 class="project-title">GlobeTrotter — Smart Travel Hub</h3>
+                            <p class="project-desc">
+                                Modern travel planning platform developed for the Odoo x SNS Coimbatore Hiring Hackathon
+                                2026, offering automated itinerary generation and location matching.
+                            </p>
+                            <div class="project-footer">
+                                <a href="https://github.com/Dhruv-Ghanchi/Odoo-Globe-Trotter" target="_blank"
+                                    rel="noopener" class="btn btn-outline-red btn-sm">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <div class="project-meta-info">
+                                    <i class="fa-solid fa-laptop-code text-accent-blue"></i> Odoo Hackathon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CERTIFICATIONS & COMPETITIONS SECTION -->
+        <section class="section certs-section" id="certifications">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag red-tag">ACHIEVEMENTS & BADGES</span>
+                    <h2 class="section-title">Certifications & <span class="gradient-text-red">Competitions</span></h2>
+                    <p class="section-subtitle">National level hackathons, CTF achievements, and professional
+                        certifications.</p>
+                </div>
+
+                <div class="certs-grid">
+                    <!-- Cert Card 1 -->
+                    <div class="cert-card red-border">
+                        <div class="cert-header">
+                            <div class="cert-icon-wrapper red">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="cert-year">2026</span>
+                        </div>
+                        <h4 class="cert-title">Mastercard Cybersecurity Job Simulation</h4>
+                        <p class="cert-org">Issued by Forage</p>
+                        <p class="cert-details">Specialized training in phishing analysis, incident response, and
+                            awareness presentation construction.</p>
+                        <div class="cert-footer">
+                            <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified
+                                Certificate</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 2 -->
+                    <div class="cert-card blue-border">
+                        <div class="cert-header">
+                            <div class="cert-icon-wrapper blue">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <span class="cert-year">2026</span>
+                        </div>
+                        <h4 class="cert-title">VISHWANOVA 2026 Grand Finalist</h4>
+                        <p class="cert-org">MIT-WPU National Competition</p>
+                        <p class="cert-details">Selected as National Project Competition Grand Finalist for presenting
+                            <strong>Lazarus AI Security Platform</strong>.
+                        </p>
+                        <div class="cert-footer">
+                            <span class="verified-badge blue"><i class="fa-solid fa-star"></i> Grand Finalist</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 3 -->
+                    <div class="cert-card red-border">
+                        <div class="cert-header">
+                            <div class="cert-icon-wrapper red">
+                                <i class="fa-solid fa-flag-checkered"></i>
+                            </div>
+                            <span class="cert-year">2026</span>
+                        </div>
+                        <h4 class="cert-title">CHAKRAVYUHA 2.0 CTF — 5th Place</h4>
+                        <p class="cert-org">LTCE Cybersecurity CTF</p>
+                        <p class="cert-details">Secured <strong>5th rank in the final round</strong> out of dozens of
+                            top university cybersecurity teams.</p>
+                        <div class="cert-footer">
+                            <span class="verified-badge red"><i class="fa-solid fa-shield-halved"></i> 5th Rank
+                                Finalist</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 4 -->
+                    <div class="cert-card blue-border">
+                        <div class="cert-header">
+                            <div class="cert-icon-wrapper blue">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                            <span class="cert-year">2026</span>
+                        </div>
+                        <h4 class="cert-title">INNOVATIONS 2026 Round 2 Qualifier</h4>
+                        <p class="cert-org">CSI SIESGST National Competition</p>
+                        <p class="cert-details">Qualified for Round 2 in national software engineering project
+                            competition presenting Lazarus platform.</p>
+                        <div class="cert-footer">
+                            <span class="verified-badge blue"><i class="fa-solid fa-circle-check"></i> Qualified</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 5 -->
+                    <div class="cert-card red-border">
+                        <div class="cert-header">
+                            <div class="cert-icon-wrapper red">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <span class="cert-year">2025</span>
+                        </div>
+                        <h4 class="cert-title">PCB Design Competition — 2nd Place</h4>
+                        <p class="cert-org">SAKEC Mumbai</p>
+                        <p class="cert-details">Secured <strong>2nd place overall</strong> for hardware circuit design
+                            and schematic optimization.</p>
+                        <div class="cert-footer">
+                            <span class="verified-badge red"><i class="fa-solid fa-medal"></i> 2nd Place Winner</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 6 -->
+                    <div class="cert-card blue-border">
+                        <div class="cert-header">
+                            <div class="cert-icon-wrapper blue">
+                                <i class="fa-solid fa-user-lock"></i>
+                            </div>
+                            <span class="cert-year">2025</span>
+                        </div>
+                        <h4 class="cert-title">Ethical Hacking Certification</h4>
+                        <p class="cert-org">SIESGST Value Added Course</p>
+                        <p class="cert-details">Hands-on course covering core cybersecurity fundamentals, network
+                            penetration, and security audit tools.</p>
+                        <div class="cert-footer">
+                            <span class="verified-badge blue"><i class="fa-solid fa-circle-check"></i> Verified
+                                Course</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT ME SECTION -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-side">
+                        <span class="section-tag red-tag">GET IN TOUCH</span>
+                        <h2 class="section-title">Let's Build Something <span class="gradient-text-red-blue">Great
+                                Together</span></h2>
+                        <p class="contact-intro">
+                            Have an exciting project, hackathon collaboration, or internship opportunity? Feel free to
+                            reach out directly or send a message using the form.
+                        </p>
+
+                        <div class="contact-cards-stack">
+                            <div class="contact-mini-card">
+                                <div class="contact-icon red-bg"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Navi Mumbai, Maharashtra, India</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-mini-card">
+                                <div class="contact-icon blue-bg"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="contact-label">Email Me</span>
+                                    <a href="mailto:atharvak0209@gmail.com"
+                                        class="contact-value link">atharvak0209@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-mini-card">
+                                <div class="contact-icon red-bg"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div>
+                                    <span class="contact-label">LinkedIn</span>
+                                    <a href="https://linkedin.com/in/atharva-khandagale-412892333" target="_blank"
+                                        rel="noopener" class="contact-value link">Atharva Khandagale</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-mini-card">
+                                <div class="contact-icon blue-bg"><i class="fa-brands fa-github"></i></div>
+                                <div>
+                                    <span class="contact-label">GitHub</span>
+                                    <a href="https://github.com/AtharvaK0209" target="_blank" rel="noopener"
+                                        class="contact-value link">github.com/AtharvaK0209</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-side glass-card">
+                        <h3>Send A Message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject"
+                                    placeholder="Project Inquiry / Opportunity" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Hi Atharva, I'd like to talk about..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-glow-red" id="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                            <div id="form-status" class="form-status-alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-badge">AK</span>
+                    <span class="logo-text">ATHARVA<span class="text-accent-red">.DEV</span></span>
+                </a>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/atharva-khandagale-412892333" target="_blank" aria-label="LinkedIn"
+                        class="social-icon red-hover"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/AtharvaK0209" target="_blank" aria-label="GitHub"
+                        class="social-icon blue-hover"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:atharvak0209@gmail.com" aria-label="Email" class="social-icon red-hover"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atharva Khandagale. All rights reserved. Designed with Red & Blue Cyber aesthetics.</p>
+                <a href="#home" class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
