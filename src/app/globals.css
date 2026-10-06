@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Primary Red */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: #ffffff;
+  
+  /* Surfaces */
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  
+  /* Text */
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  
+  /* Borders */
+  --color-border: var(--border);
+  
+  /* Focus / Status */
+  --color-focus-ring: var(--primary);
+  --color-success: #10b981;
+  --color-error: #ef4444;
+
+  /* Fonts */
+  --font-display: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-mono: var(--font-fira-code), monospace;
+
+  /* Animations */
+  --transition-duration-fast: 150ms;
+  --transition-duration-normal: 300ms;
+  --transition-duration-slow: 500ms;
+  
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+@layer base {
+  :root {
+    /* Light Theme (Cream/Beige base) */
+    --background: #faf8f5;
+    --foreground: #0f172a;
+    
+    --surface: #ffffff;
+    --surface-elevated: #f1ede9;
+    
+    --primary: #ff3b5c;
+    --primary-hover: #ff2046;
+    
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    
+    --border: rgba(0, 0, 0, 0.08);
+  }
+  
+  .dark {
+    /* Dark Theme (Charcoal/Black base) */
+    --background: #070a14;
+    --foreground: #f8fafc;
+    
+    --surface: #0e1628;
+    --surface-elevated: #16213a;
+    
+    --primary: #ff3b5c;
+    --primary-hover: #ff6b84;
+    
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    --border: rgba(255, 255, 255, 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Accessibility Focus Rings */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
