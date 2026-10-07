@@ -3,6 +3,9 @@ import { Outfit, Plus_Jakarta_Sans, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -30,14 +33,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${jakarta.variable} ${firaCode.variable}`}>
-      <body className="antialiased min-h-screen flex flex-col bg-background text-foreground transition-colors duration-normal font-sans selection:bg-primary/30 selection:text-primary-foreground">
+      <body className="antialiased min-h-screen flex flex-col bg-background text-foreground transition-colors duration-normal font-sans selection:bg-primary/30 selection:text-primary-foreground pt-16">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <main className="flex-1 flex flex-col">
+            {children}
+          </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
