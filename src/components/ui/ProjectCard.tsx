@@ -5,9 +5,10 @@ import { FaGithub, FaArrowRight } from "react-icons/fa6";
 interface ProjectCardProps {
   project: Project;
   isPrimary?: boolean;
+  showFeaturedBadge?: boolean;
 }
 
-export function ProjectCard({ project, isPrimary = false }: ProjectCardProps) {
+export function ProjectCard({ project, isPrimary = false, showFeaturedBadge = false }: ProjectCardProps) {
   return (
     <div 
       className={`group flex flex-col h-full rounded-2xl border border-border bg-surface hover:border-primary/50 hover:-translate-y-1 transition-all duration-normal overflow-hidden ${
@@ -18,9 +19,16 @@ export function ProjectCard({ project, isPrimary = false }: ProjectCardProps) {
         
         {/* Header */}
         <div className="mb-4">
-          <h3 className={`${isPrimary ? "text-2xl lg:text-3xl" : "text-xl"} font-display font-bold text-foreground mb-1 group-hover:text-primary transition-colors`}>
-            {project.name}
-          </h3>
+          <div className="flex items-start justify-between gap-4 mb-1">
+            <h3 className={`${isPrimary ? "text-2xl lg:text-3xl" : "text-xl"} font-display font-bold text-foreground group-hover:text-primary transition-colors`}>
+              {project.name}
+            </h3>
+            {showFeaturedBadge && project.featured && (
+              <span className="shrink-0 px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary border border-primary/20">
+                Featured
+              </span>
+            )}
+          </div>
           <p className="text-sm font-medium text-text-muted">
             {project.tagline}
           </p>
