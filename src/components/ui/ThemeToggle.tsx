@@ -6,12 +6,12 @@ import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-
-  // Avoid hydration mismatch by waiting for mount
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Avoid hydration mismatch by waiting for mount via useSyncExternalStore
+  const mounted = React.useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   if (!mounted) {
     return (

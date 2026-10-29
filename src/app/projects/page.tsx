@@ -5,13 +5,13 @@ import { SectionContainer } from "@/components/layout/SectionContainer";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Projects — Atharva Khandagale",
+  title: "Projects",
   description: "A selection of software engineering, AI, cybersecurity, and product projects built by Atharva Khandagale.",
 };
 
 export default function ProjectsPage() {
   return (
-    <main className="flex-1 flex flex-col bg-background">
+    <div className="flex-1 flex flex-col bg-background">
       
       {/* Page Hero */}
       <SectionContainer className="pt-24 md:pt-32 pb-12 md:pb-16 border-b border-border bg-surface-elevated/30">
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             Selected Work
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
-            Projects I've Built
+            Projects I&apos;ve Built
           </h1>
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
             A comprehensive catalog of projects representing my work across software engineering, AI experimentation, cybersecurity, and product development.
@@ -50,7 +50,6 @@ export default function ProjectsPage() {
           })}
         </div>
       </SectionContainer>
-
-    </main>
+    </div>
   );
 }

@@ -6,12 +6,14 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Terminal } from "lucide-react";
 import { siteConfig } from "@/data/config";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { useCommandShell } from "@/components/providers/CommandShellProvider";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const pathname = usePathname();
   const [activeHash, setActiveHash] = React.useState("");
+  const { openShell } = useCommandShell();
 
   // Handle scroll state for navbar background
   React.useEffect(() => {
@@ -33,9 +35,12 @@ export function Navbar() {
   }, []);
 
   // Close mobile menu on route change
-  React.useEffect(() => {
+  const currentPath = `${pathname}${activeHash}`;
+  const [prevPath, setPrevPath] = React.useState(currentPath);
+  if (prevPath !== currentPath) {
+    setPrevPath(currentPath);
     setIsMobileMenuOpen(false);
-  }, [pathname, activeHash]);
+  }
 
   // Lock body scroll when mobile menu is open
   React.useEffect(() => {
@@ -107,11 +112,17 @@ export function Navbar() {
           <ThemeToggle />
           
           <button 
-            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-md bg-surface-elevated border border-border text-foreground hover:bg-surface hover:border-primary/50 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            type="button"
+            onClick={openShell}
+            className="flex items-center gap-2 px-3.5 py-1.5 text-sm font-semibold rounded-md bg-surface-elevated border border-border text-foreground hover:bg-surface hover:border-primary/50 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer"
             aria-label="Open AI Command Shell"
+            title="Open AI Command Shell (Ctrl+K)"
           >
-            <Terminal className="w-4 h-4" />
+            <Terminal className="w-4 h-4 text-primary" />
             <span>Ask AI</span>
+            <kbd className="hidden xl:inline text-[10px] font-mono text-text-muted px-1.5 py-0.5 rounded bg-surface border border-border">
+              ⌘K
+            </kbd>
           </button>
         </div>
 
@@ -160,9 +171,14 @@ export function Navbar() {
             </a>
             
             <button 
-              className="flex items-center gap-2 px-4 py-3 mt-4 text-base font-semibold rounded-md bg-surface-elevated border border-border text-foreground hover:bg-surface justify-center"
+              type="button"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openShell();
+              }}
+              className="flex items-center gap-2 px-4 py-3 mt-4 text-base font-semibold rounded-md bg-surface-elevated border border-border text-foreground hover:bg-surface justify-center cursor-pointer"
             >
-              <Terminal className="w-5 h-5" />
+              <Terminal className="w-5 h-5 text-primary" />
               <span>Ask AI Command Shell</span>
             </button>
           </nav>

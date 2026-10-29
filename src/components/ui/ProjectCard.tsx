@@ -63,32 +63,35 @@ export function ProjectCard({ project, isPrimary = false, showFeaturedBadge = fa
           )}
 
           {/* Links */}
-          <div className="flex items-center gap-4 pt-4 mt-2 border-t border-border/50">
-            {project.githubUrl && (
-              <a 
-                href={project.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-text-muted hover:text-foreground transition-colors flex items-center gap-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
-                aria-label={`View ${project.name} on GitHub`}
-              >
-                <FaGithub className="w-4 h-4" />
-                <span>GitHub</span>
-              </a>
-            )}
-            {project.liveUrl && (
-              <a 
-                href={project.liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-text-muted hover:text-foreground transition-colors flex items-center gap-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
-                aria-label={`View live demo of ${project.name}`}
-              >
-                <span>Live Demo</span>
-                <FaArrowRight className="w-3 h-3 -rotate-45" />
-              </a>
-            )}
-          </div>
+          {((project.githubUrl && project.githubUrl !== "#" && project.githubUrl.trim() !== "") ||
+            (project.liveUrl && project.liveUrl !== "#" && project.liveUrl.trim() !== "")) && (
+            <div className="flex items-center gap-4 pt-4 mt-2 border-t border-border/50">
+              {project.githubUrl && project.githubUrl !== "#" && project.githubUrl.trim() !== "" && (
+                <a 
+                  href={project.githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-foreground transition-colors flex items-center gap-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+                  aria-label={`View ${project.name} on GitHub`}
+                >
+                  <FaGithub className="w-4 h-4" />
+                  <span>GitHub</span>
+                </a>
+              )}
+              {project.liveUrl && project.liveUrl !== "#" && project.liveUrl.trim() !== "" && (
+                <a 
+                  href={project.liveUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-foreground transition-colors flex items-center gap-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+                  aria-label={`View live demo of ${project.name}`}
+                >
+                  <span>Live Demo</span>
+                  <FaArrowRight className="w-3 h-3 -rotate-45" />
+                </a>
+              )}
+            </div>
+          )}
 
         </div>
       </div>

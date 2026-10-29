@@ -4,8 +4,10 @@ export const siteConfig = {
   url: "https://atharvakhandagale.com", // Example URL
   resumeUrl: "/documents/Atharva_Khandagale_Resume.pdf",
   links: {
-    github: "https://github.com/atharvakhandagale",
-    linkedin: "https://linkedin.com/in/atharvakhandagale",
+    github: "https://github.com/AtharvaK0209",
+    linkedin: "https://linkedin.com/in/atharva-khandagale-412892333",
+    email: "atharvak0209@gmail.com",
+    location: "Navi Mumbai, Maharashtra, India",
     twitter: "https://twitter.com/atharvakhandagale",
     instagram: "https://instagram.com/atharvakhandagale",
   },
